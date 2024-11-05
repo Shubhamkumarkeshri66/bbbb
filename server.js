@@ -48,6 +48,7 @@ app.get("/getdata", (req, res) => {
     } else {
       res.status(200).json({
         success: true,
+        data: result,
         message: "data inserted succesfulyy",
       });
     }
