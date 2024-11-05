@@ -37,6 +37,22 @@ app.post("/insertdata", (req, res) => {
   });
 });
 
+app.get("/getdata", (req, res) => {
+  const query1 = `select * from employee`;
+  connection.query(query1, (err, result) => {
+    if (err) {
+      res.status(400).json({
+        success: false,
+        message: err.message,
+      });
+    } else {
+      res.status(200).json({
+        success: true,
+        message: "data inserted succesfulyy",
+      });
+    }
+  });
+});
 app.listen(PORT, () => {
   console.log(`app is running on port ${PORT}`);
 });
