@@ -41,5 +41,5 @@ app.listen(PORT, () => {
   console.log(`app is running on port ${PORT}`);
 });
 app.get("/", (req, res) => {
-  res.send("i am running");
+  res.send("i am running bro mai chal rh");
 });
